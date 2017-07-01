@@ -58,7 +58,7 @@ app.post('/addpost', function (req, res) {
   var title = req.body.title;
   var subject = req.body.subject;
   var id = req.body.id;
-  if(id == undefined){
+  if(id == '' || id == undefined)
     console.log('add');
     post.addPost(title, subject ,function(result){
       res.send(result);
