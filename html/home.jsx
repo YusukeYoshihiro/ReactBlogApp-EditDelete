@@ -26,7 +26,7 @@ class AddPost extends React.Component {
       axios.post('/addPost', {
         title: this.state.title,
         subject: this.state.subject,
-        id: this.state.id
+        id: this.props.params.id
       })
       .then(function (response) {
         console.log('reponse from add post is ',response);
